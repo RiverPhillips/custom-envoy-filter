@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package baggage;
+
+message Baggage {
+    repeated string metadata_keys = 1;
+}
