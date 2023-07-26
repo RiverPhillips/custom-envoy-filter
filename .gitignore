@@ -1,4 +1,3 @@
-bazel/
 bazel-bin/
 bazel-custom-envoy-filter/
 bazel-out/

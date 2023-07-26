@@ -21,6 +21,9 @@ FilterHeadersStatus HttpBaggageFilter::decodeHeaders(RequestHeaderMap&, bool) {
   for (const auto& key : config_->metadata_keys()) {
     const auto& metadata_it = metadata.find(key);
     if (metadata_it != metadata.end()) {
+      const auto pb_struct = metadata_it->second;
+
+    
       decoder_callbacks_->activeSpan().setBaggage(key, metadata_it->second);
     }
   }
